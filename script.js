@@ -47,36 +47,46 @@ function getMenu() {
 console.log(order);
 
 function takeOrder(order) {
-    return new Promise((resolve) => {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
             console.log('Order taken:', order);
             resolve(order);
         }, 2500);
     })
-    .then(order => orderPrep(order));
+    .then(order => orderPrep(order))
+    .catch(error => {
+        console.log("error in takeorder:", error);
+    })
 }
 
 
 function orderPrep(order) {
-    return new Promise((resolve) => {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
             const prepStatus = { order_status: true, paid: false };
             console.log('Order preparation complete:', prepStatus);
             resolve(prepStatus);
         }, 1500);
     })
-    .then(status => payOrder(status));
+    .then(status => payOrder(status))
+    .catch(error =>{
+        console.log("error in orderPrep:", error);
+    })
 }
 
 function payOrder(status) {
-    return new Promise((resolve) => {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
             const paymentStatus = { order_status: true, paid: true };
             console.log('Order paid:', paymentStatus);
             resolve(paymentStatus);
+           // reject("not pay");
         }, 1000);
     })
-   .then(status => thankyouFnc(status));
+   .then(status => thankyouFnc(status))
+   .catch(error =>{
+     console.log("error in payorder:", error);
+   })
 }
 
 function thankyouFnc(status) {
