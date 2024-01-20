@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color : white;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    /* width : 100%; */
+   
+}
+
+#logo>img{
+    width : 250px;
+    /* margin : 10px; */
+}
+
+#logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#logo>p{
+    color : red;
+}
+#logo>h5{
+    font-family: Poppins;
+    font-size: 20px;
+  font-weight: 600;
+line-height: 36px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+#links{
+    margin : 20px 0px;
+}
+#links>h4 , #more>h4{
+    font-family: Poppins;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+}
+
+ol{
+    margin-left : 40px;
+}
+
+#section2>img{
+    width : 75vw;
+    height : 40vh;
+    margin : 30px 30px;
+}
+
+nav{
+    background-color: #191d20;
+    padding : 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav>input{
+    background-color: #272A30;
+    border : none;
+    color : #878787;
+    width : 500px;
+    height : 30px;
+    padding-left : 20px;
+    border-radius: 5px;
+}
+nav>button{
+    color : #f5f5f5;
+    background-color: #ff2424 ;
+    width : 150px;
+    border : none;
+    height : 30px;
+    border-radius: 5px;
+    margin-inline: 20px;
+}
+
+nav>img{
+    width : 50px;
+}
+#section1{
+    width : 20vw;
+
+}
+#section2{
+    width : 80vw;
+    background-color: #111315;
+    height : 100vh;
+}
+
+#menu{
+    margin-left : 30px;
+}
+#menu>h5{
+    font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+#menu-list>div>img{
+    width : 200px;
+}
+#menu-list button{
+    color : black;
+    background-color: #373b43;
+    border: none;
+    padding: 3px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   align-items: center;
+}
+
+#menu-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#menu-list>div{
+    margin : 20px;
+}
+.Price{
+    font-family: Poppins;
+font-size: 15px;
+font-weight:lighter;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+#menu >button{
+    color : #f5f5f5;
+    background-color: #ff2424 ;
+    width : 150px;
+    border : none;
+    height : 30px;
+    border-radius: 5px;
+    margin-inline: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width : 600px){
+    #section1{
+        display: none;
+    }
+    #section2{
+        width : 100vw;
+       
+    }
+    nav>input{
+        width : 150px;
+        margin-right: 2px;
+    }
+    nav>button{
+        margin-inline: 2px;
+    }
+    #sec2-img{
+        height : 200px;
+    }
+}
+
+@media screen and (min-width : 600px) and (max-width : 1050px){
+    #logo>img{
+        width : 100px;
+    }
+    #logo>h5{
+        font-size: small;
+    }
+    #section1 li{
+        font-size: 15px;
+    }
+}
